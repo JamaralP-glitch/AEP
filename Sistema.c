@@ -51,7 +51,7 @@ void CriarRelatorio() {
  
     total = total + 1; 
 
-    // o ID do relatorio é o valor de total (1º relatorio = ID 1, 2º = ID 2...)
+    // o ID do relatorio é o valor de total (1º relatorio = ID 1, 2º = ID 2, asssim chegando até 100)
     printf("\nRelatorio criado! ID do relatorio: %d\n", total);
 }
 
@@ -108,11 +108,13 @@ int main() {
     printf("Senha: ");
     scanf("%s", senha);
 
-    if (strcmp(login, "admin") != 0 || strcmp(senha, "1234") != 0) {
+    if (strcmp(login, "admin") != 0 || strcmp(senha, "1234") != 0) // Condições para fazer o login
+     {
         printf("Login ou senha incorretos.\n");
         return 0;
     }
-
+    
+        // menu para de opçoes para consegueir selecionar as os caminhos no código
     do {
         printf("\n-----------Menu-------------\n");
         printf("1 - Criar relatorio\n");
